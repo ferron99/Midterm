@@ -175,7 +175,7 @@ void buttons() {
   text("Pink 'P' ", 310, 90);
   text("Spawn Mouse ", 430, 70);
   text("'M' ", 430, 90);
-  text(width-50, 100,100);
+  //text(width-50, 100,100);
   
 }
 void messages() {
