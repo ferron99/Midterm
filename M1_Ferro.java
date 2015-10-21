@@ -1,26 +1,23 @@
-//// Midterm code for 59CST112
+//// Nick Ferro
+// CST112 Midterm
+// 10-21-2015
 
 
 float nickX,  nickY,  nickDX,  nickDY;   
 float windX,  windY,  windDX,  windDY;        
-float fernX,  fernY,  fernDX,  fernDY;              
-  
+float fernX,  fernY,  fernDX,  fernDY;                
 String title=  "CST112 MIDTERM EXAM";
-
 String author=  "Nick Ferro";
-
 float left=50, right=590, top=150, bottom=400;        // Table boundaries
 float middle=(left+right)/2;
 boolean wall=true;
 boolean mouse=false;            //toggle for mouse
 float miceX, miceY, miceDX;
 int frame;                      //frame counter
-
 int tableRed=150, tableGreen=250, tableBlue=150;      // green pool table
 int score=0,m=0,k=0;
 
    
-//// SETUP:  size and table
 void setup() {
     size( 640, 480 );         
     reset();
@@ -51,7 +48,7 @@ void reset(){
    miceDX= -1;
 }
 
-//// HANDLERS:  keys, click
+
 void keyPressed() {
   if (key == 'q') { exit();  }
   if (key == 'r') { reset(); }
@@ -70,9 +67,6 @@ void table( float east, float north, float west, float south ) {
   stroke( 127, 0, 0 );      // Brown walls
   rect( east-20, north-20, west+20, south+20 );
 
-            //++++ MODIFY THIS CODE, as necessary. ++++
-
-  // Start with a WALL down the middle of the table! 
   if (wall) {
     float middle=  (east+west)/2;    
     stroke( 0, 127, 0 );
