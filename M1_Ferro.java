@@ -105,14 +105,17 @@ void collisions() {
   if ( dist( nickX,nickY, windX,windY ) < 30 ) {         //wind and nick
     tmp=windDX;  windDX=nickDX;  nickDX=tmp;
     tmp=windDY;  windDY=nickDY;  nickDY=tmp;
+    k +=1;
   }
   if ( dist( fernX,fernY, windX,windY ) < 30 ) {         //wind and fern
     tmp=windDX;  windDX=fernDX;  fernDX=tmp;
     tmp=windDY;  windDY=fernDY;  fernDY=tmp;
+    k +=1;
   }
   if ( dist( nickX,nickY, fernX,fernY ) < 30 ) {         //fern and nick
     tmp=fernDX;  fernDX=nickDX;  nickDX=tmp;
     tmp=fernDY;  fernDY=nickDY;  nickDY=tmp;
+    k +=1;
   }
 }
 
@@ -181,7 +184,8 @@ void buttons() {
 void messages() {
   fill(0);
   text( title, width/3, 15 );
-  
+  text("Collisions", 50, 450);
+  text(k, 120, 450);
   text( author, 10, height-5 );
 }
 
